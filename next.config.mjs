@@ -1,9 +1,17 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'ayush-nextjs-food-app.s3.amazonaws.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
+  },
   experimental: {
     serverActions: {
-      bodySizeLimit: "10mb",
+      bodySizeLimit: "5mb", // or "5mb"
     },
   },
 };

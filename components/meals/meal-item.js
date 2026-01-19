@@ -9,7 +9,11 @@ export default function MealItem({ title, slug, image, summary, creator }) {
     <article className={classes.meal}>
       <header>
         <div className={classes.image}>
-          <Image src={imageSrc} alt={title} fill />
+          <Image
+            src={`https://ayush-nextjs-food-app.s3.amazonaws.com/${image}`}
+            alt={title}
+            fill
+          />
         </div>
 
         <div className={classes.headerText}>

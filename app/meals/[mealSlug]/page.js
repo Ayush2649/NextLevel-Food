@@ -18,7 +18,11 @@ export default async function MealsSlug({ params }) {
     <>
       <header className={classes.header}>
         <div className={classes.image}>
-          <Image fill src={meal.image} alt={meal.title} />
+          <Image
+            src={`https://ayush-nextjs-food-app.s3.amazonaws.com/${meal.image}`}
+            alt={meal.title}
+            fill
+          />
         </div>
 
         <div className={classes.headerText}>
